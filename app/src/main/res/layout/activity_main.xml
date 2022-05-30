@@ -10,6 +10,7 @@
         android:id="@+id/siguiente_VLAV"
         android:layout_width="146dp"
         android:layout_height="52dp"
+        android:onClick="Seguir_VLAV"
         android:text="Siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
