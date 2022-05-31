@@ -14,6 +14,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
      private ListView listaRecuperada_VLAV;
     private ArrayAdapter<String> adapter_VLAV;
+    private ListView listaIndice_VLAV;
+    private ListView listaOrdenada_VLAV;
+    private ArrayList<String> lista;
 
 
 
@@ -24,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         listaRecuperada_VLAV = findViewById(R.id.listaRecuperada_VLAV);
+        listaIndice_VLAV = findViewById(R.id.listaIndice_VLAV);
+        listaOrdenada_VLAV = findViewById(R.id.listaOrdenar_VLAV);
+
+
 
 
     }
@@ -35,10 +42,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Mostrar_VLAV(View view){
-        ArrayList<String> lista = getIntent().getStringArrayListExtra("lista1");
+        lista = getIntent().getStringArrayListExtra("lista1");
         adapter_VLAV = new ArrayAdapter<String>(this
                 , android.R.layout.simple_list_item_1,lista);
         listaRecuperada_VLAV.setAdapter(adapter_VLAV);
     }
+
+    public void OrdenarIndice_VLAV(View view){
+
+        for(int i=0; i <= lista.toArray().length; i++  ){
+
+
+        }
+
+
+
+    }
+
+
 
 }

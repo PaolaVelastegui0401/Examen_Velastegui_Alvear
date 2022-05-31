@@ -49,9 +49,9 @@ public class MainActivity2_VLAV extends AppCompatActivity {
         Intent siguiente2 = new Intent(this, MainActivity.class);
         siguiente2.putStringArrayListExtra("lista1", (ArrayList<String>) arrayList_VLAV);
         startActivity(siguiente2);
-
-
     }
+
+
 
 
 
