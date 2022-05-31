@@ -10,12 +10,67 @@
         android:id="@+id/siguiente_VLAV"
         android:layout_width="146dp"
         android:layout_height="52dp"
+        android:layout_marginBottom="16dp"
         android:onClick="Seguir_VLAV"
         android:text="Siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/listaRecuperada_VLAV"
+        android:layout_width="78dp"
+        android:layout_height="365dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/siguiente_VLAV"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648" />
+        app:layout_constraintVertical_bias="0.489" />
+
+    <Button
+        android:id="@+id/btn_Mostrar_VLAV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:onClick="Mostrar_VLAV"
+        android:text="Mostrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listaRecuperada_VLAV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ListView
+        android:id="@+id/listaIndice_VLAV"
+        android:layout_width="116dp"
+        android:layout_height="359dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/siguiente_VLAV"
+        app:layout_constraintEnd_toStartOf="@+id/listaRecuperada_VLAV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.674" />
+
+    <ListView
+        android:id="@+id/listaOrdenar_VLAV"
+        android:layout_width="107dp"
+        android:layout_height="362dp"
+        android:layout_marginTop="204dp"
+        app:layout_constraintEnd_toStartOf="@+id/listaIndice_VLAV"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Ordenar_VLAV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:text="Ordenar"
+        app:layout_constraintBottom_toTopOf="@+id/siguiente_VLAV"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Mostrar_VLAV"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_dynamic"
+        app:layout_constraintVertical_bias="0.591" />
 </androidx.constraintlayout.widget.ConstraintLayout>

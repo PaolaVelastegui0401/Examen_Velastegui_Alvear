@@ -2,6 +2,7 @@ package fisei.uta.edu.ec.examen_velastegui_alvear;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,7 +36,24 @@ public class MainActivity2_VLAV extends AppCompatActivity {
         lista_VLAV.setAdapter(adapter_VLAV);
 
 
+    }
+
+    //Metodo boton agregar
+    public void Agregar_VLAV(View view){
+        arrayList_VLAV.add(numero_VLAV.getText().toString());
+        adapter_VLAV.notifyDataSetChanged();
+    }
+
+    public void Cerrar_VLAV(View view){
+
+        Intent siguiente2 = new Intent(this, MainActivity.class);
+        siguiente2.putStringArrayListExtra("lista1", (ArrayList<String>) arrayList_VLAV);
+        startActivity(siguiente2);
+
 
     }
+
+
+
 
 }
