@@ -17,8 +17,8 @@ public class MainActivity2_VLAV extends AppCompatActivity {
 
     //generar Lista
     private ListView lista_VLAV;
-    private ArrayAdapter<String> adapter_VLAV;
-    private ArrayList<String> arrayList_VLAV;
+    private ArrayAdapter<Integer> adapter_VLAV;
+    private ArrayList<Integer> arrayList_VLAV;
 
 
 
@@ -30,8 +30,8 @@ public class MainActivity2_VLAV extends AppCompatActivity {
         numero_VLAV = findViewById(R.id.numero_VLAV);
         lista_VLAV = findViewById(R.id.listaNumeros_VLAV);
 
-        arrayList_VLAV = new ArrayList<String>();
-        adapter_VLAV = new ArrayAdapter<String>(this
+        arrayList_VLAV = new ArrayList<Integer>();
+        adapter_VLAV = new ArrayAdapter<Integer>(this
                 , android.R.layout.simple_list_item_1,arrayList_VLAV);
         lista_VLAV.setAdapter(adapter_VLAV);
 
@@ -40,14 +40,16 @@ public class MainActivity2_VLAV extends AppCompatActivity {
 
     //Metodo boton agregar
     public void Agregar_VLAV(View view){
-        arrayList_VLAV.add(numero_VLAV.getText().toString());
+
+
+        arrayList_VLAV.add(Integer.parseInt(numero_VLAV.getText().toString()));
         adapter_VLAV.notifyDataSetChanged();
     }
 
     public void Cerrar_VLAV(View view){
 
         Intent siguiente2 = new Intent(this, MainActivity.class);
-        siguiente2.putStringArrayListExtra("lista1", (ArrayList<String>) arrayList_VLAV);
+        siguiente2.putIntegerArrayListExtra("lista1", (ArrayList<Integer>) arrayList_VLAV);
         startActivity(siguiente2);
     }
 
